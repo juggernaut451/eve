@@ -1,4 +1,5 @@
 RESOURCE_METHODS = ['GET', 'POST']
+AUTH_FIELD = 'username'
 DOMAIN = {
     'user': {
         'schema': {
@@ -28,5 +29,6 @@ DOMAIN = {
             'url': 'regex("[\w]+")',
             'field': 'username',
             },
+
     }
 }

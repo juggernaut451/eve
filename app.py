@@ -7,13 +7,25 @@ import string
 class Authenticate(BasicAuth):
     def check_auth(self, username, password, allowed_roles, resource,
                    method):
+        print (resource)
+        print (method) 
+        print (username)
         if resource == 'user' and method == 'GET':
             user = app.data.driver.db['user']
             user = user.find_one({'username': username,'password':password})
+            print(user['username'])
+            self.set_request_auth_value(user['username'])
+
             if user:
                 return True
             else:
                 return False
+        elif resource == 'user' and method == 'POST':
+            print (username)
+            print (password)
+            return username == 'admin' and password == 'password'
+        else:
+            return True
 
 def add_token(documents):
     # Don't use this in production:
