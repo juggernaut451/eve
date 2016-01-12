@@ -8,7 +8,7 @@ DOMAIN = {
         'schema': {
             'firstname': {
                 'type': 'string',
-                'required' : True,
+                'required': True,
             },
             'lastname': {
                 'type': 'string',
@@ -16,7 +16,7 @@ DOMAIN = {
             },
             'username': {
                 'type': 'string',
-                 'unique': True,
+                'unique': True,
             },
             'password': {
                 'type': 'string',
@@ -26,21 +26,21 @@ DOMAIN = {
                 'type': 'string',
                 'required': True,
             },
-            
+
         },
 
     },
-    'login' : {
-    'authentication': Authenticate,
-    'datasource': {
-        'source': 'signup',
+    'login': {
+        'authentication': Authenticate,
+        'datasource': {
+            'source': 'signup',
         },
-    'resource_methods': ['GET'],
-    'cache_control': '',
-    'cache_expires': 0,
-    #'extra_response_fields': ['token'],
-    
-    'schema': {     
+        'resource_methods': ['GET'],
+        'cache_control': '',
+        'cache_expires': 0,
+        #'extra_response_fields': ['token'],
+
+        'schema': {
             'username': {
                 'type': 'string',
                 'required': True,
@@ -50,14 +50,14 @@ DOMAIN = {
                 'required': True,
             },
             'token': {
-             'type': 'string',
-             'required': True,
-         }
-            
+                'type': 'string',
+                'required': True,
+            }
+
         },
-    'additional_lookup': {
+        'additional_lookup': {
             'url': 'regex("[\w]+")',
             'field': 'username',
-            }
+        }
     },
 }
