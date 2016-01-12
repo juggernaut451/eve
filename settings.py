@@ -1,4 +1,4 @@
-from app import Authenticate
+from auth import Authenticate
 MONGO_DBNAME = "eve"
 #AUTH_FIELD = 'username'
 RESOUCE_METHODS = ['GET']
@@ -31,7 +31,7 @@ DOMAIN = {
 
     },
     'login' : {
-    #'authentication': Authenticate,
+    'authentication': Authenticate,
     'datasource': {
         'source': 'signup',
         },
