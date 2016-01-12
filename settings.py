@@ -26,7 +26,7 @@ DOMAIN = {
                 'type': 'string',
                 'required': True,
             },
-
+            
         },
 
     },
