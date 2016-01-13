@@ -7,7 +7,7 @@ import string
 app = current_app
 
 
-class Authenticate(BasicAuth):
+class Basicauth(BasicAuth):
 
     def check_auth(self, username, password, allowed_roles, resource,
                    method):
@@ -42,7 +42,7 @@ class Authenticate(BasicAuth):
             return True
 
 
-class RolesAuth(TokenAuth):
+class Tokenauth(TokenAuth):
 
     def check_auth(self, token,  allowed_roles, resource, method):
         # print(resource)
