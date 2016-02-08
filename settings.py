@@ -38,7 +38,6 @@ DOMAIN = {
         'resource_methods': ['GET'],
         'cache_control': '',
         'cache_expires': 0,
-        #'extra_response_fields': ['token'],
 
         'schema': {
             'username': {
